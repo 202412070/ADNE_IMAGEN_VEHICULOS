@@ -64,9 +64,15 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
 
 ## 4. Deep Learning – From Scratch & Transfer Learning
 
-- **4.1 CNN From Scratch**  
-  - Arquitectura sencilla de 3 bloques Conv→Pool → Dense → Dropout → Softmax.  
-  - Entrenamiento 10 epochs, curvas de `train/val` accuracy & loss.
+### 4.1 CNN From Scratch
+
+- Implementación manual de una red convolucional simple (`SimpleCNN`) en PyTorch.  
+- Arquitectura:
+  - **2 capas convolucionales** con activaciones `ReLU` y operaciones de `MaxPool2d`.
+  - **Capa densa final** compuesta por `Flatten`, `Linear` y `ReLU`.
+- Función de pérdida utilizada: `CrossEntropyLoss`.
+- Visualización de curvas de entrenamiento y validación para `accuracy` y `loss`.
+
 
 - **4.2 Transfer Learning (EfficientNetB0)**  
   - Feature-extraction (base congelado) + capa GAP + Dropout + Softmax.  
