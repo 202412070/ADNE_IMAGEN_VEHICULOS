@@ -1,5 +1,7 @@
 # Vehículos – EDA & Pipeline ML/DL
 
+Dataset obtenido de [Kaggle](https://www.kaggle.com/datasets/mohamedmaher5/vehicle-classification).
+
 Este notebook realiza un **flujo completo** de análisis y modelado sobre un dataset de imágenes de vehículos, organizado en subcarpetas por clase. Está estructurado en seis grandes bloques:
 
 ---
@@ -114,7 +116,8 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
 
 1. Crea un entorno a partir del fichero `requirements_imagen.txt`, dentro de la carpeta **requirements**.
 2. Instala Tesseract (ejecutable en la carpeta **requirements**, obtenido de [UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki))
-3. Coloca tus imágenes en `./data/vehicle/Vehicles/<clase>/*.jpg`.  
-4. Abre el notebook, ajusta `ROOT_DIR`, `IMG_SIZE`, `BATCH_SIZE` si lo deseas.  
-5. Ejecuta celda a celda en orden.  
+3. Descargar el dataset desde [Kaggle](https://www.kaggle.com/datasets/mohamedmaher5/vehicle-classification).
+4. Coloca tus imágenes en `./data/vehicle/Vehicles/<clase>/*.jpg`.  
+5. Abre el notebook, ajusta `ROOT_DIR`, `IMG_SIZE`, `BATCH_SIZE` si lo deseas.  
+6. Ejecuta celda a celda en orden.  
 
