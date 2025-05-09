@@ -74,10 +74,12 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
 - Visualización de curvas de entrenamiento y validación para `accuracy` y `loss`.
 
 
-- **4.2 Transfer Learning (EfficientNetB0)**  
-  - Feature-extraction (base congelado) + capa GAP + Dropout + Softmax.  
-  - Entrenamiento 5 epochs.  
-  - Fine-tuning: descongelar últimas 20 capas, tasa de learning más baja, 10 epochs.
+- **4.2 Transfer Learning + Fine-tuning (ResNet50)**
+- Se utiliza un modelo ResNet50 preentrenado en ImageNet.
+- Se congelan las capas base y se reemplaza la capa final para ajustarla al número de clases del dataset.
+- Se entrena únicamente la nueva capa final utilizando Adam como optimizador.
+- Se muestran curvas de entrenamiento y validación (accuracy y loss) para analizar el rendimiento del modelo.
+
 
 ---
 
@@ -92,22 +94,27 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
 
 ## 6. Generación de Imágenes
 
-- **6.1 Neural Style Transfer (Keras)**  
-  - Basado en VGG16: losses de contenido, estilo y TV.  
-  - Optimización L-BFGS para combinar una imagen de contenido (vehículo) y una de estilo externa.
-
-- **6.2 DCGAN (PyTorch)**  
-  - Generator: series de `ConvTranspose2d` con BatchNorm y ReLU → Tanh.  
-  - Discriminator: series de `Conv2d` con LeakyReLU → Sigmoid.  
-  - Entrenamiento adversarial: BCELoss, Adam.  
-  - Visualización de muestras generadas tras cada epoch (grid 64 muestras).
+- Este script utiliza el modelo preentrenado **Stable Diffusion v1.5** para generar imágenes sintéticas representativas de distintas clases de vehículos. La generación se realiza mediante *text-to-image* condicional: a partir de una descripción textual (prompt) basada en el nombre de la clase, se produce una imagen realista que refleja esa categoría.
+- Usa el modelo `runwayml/stable-diffusion-v1-5` de Hugging Face.
+- Guarda las imágenes generadas en el directorio local `outputs/generated_images`.
 
 ---
 
+## 7. OPCIONAL:
+
+- **7.1. Image Captioning**
+  - Generación automática de descripciones para imágenes usando el modelo BLIP de Salesforce (`blip-image-captioning-base`).
+  - El modelo interpreta el contenido visual y devuelve una frase descriptiva.
+ 
+- **7.2. Text Extraction (Image-to-Text)**
+  - En esta celda se utiliza la librería `pytesseract`, un wrapper de Python para Tesseract OCR, con el objetivo de extraer texto desde una imagen. Este tipo de técnica es útil dentro del análisis de datos no estructurados cuando se trabaja con imágenes que contienen texto (por ejemplo, carteles, matrículas, documentos escaneados, etc.).
+- **NOTA**: Será necesaria primero la descarga del programa Tesseract y se recomienda instalarlo en la misma ruta que se muestra en el código.
+
 ### Cómo arrancar
 
-1. Crea un entorno Conda con todas las dependencias (OpenCV, TensorFlow, PyTorch, scikit-learn, etc.).  
-2. Coloca tus imágenes en `./data/vehicle/Vehicles/<clase>/*.jpg`.  
-3. Abre el notebook, ajusta `ROOT_DIR`, `IMG_SIZE`, `BATCH_SIZE` si lo deseas.  
-4. Ejecuta celda a celda en orden.  
+1. Crea un entorno a partir del fichero `requirements_imagen.txt`, dentro de la carpeta **requirements**.
+2. Instala Tesseract (ejecutable en la carpeta **requirements**, obtenido de [UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki))
+3. Coloca tus imágenes en `./data/vehicle/Vehicles/<clase>/*.jpg`.  
+4. Abre el notebook, ajusta `ROOT_DIR`, `IMG_SIZE`, `BATCH_SIZE` si lo deseas.  
+5. Ejecuta celda a celda en orden.  
 
