@@ -112,6 +112,8 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
   - En esta celda se utiliza la librería `pytesseract`, un wrapper de Python para Tesseract OCR, con el objetivo de extraer texto desde una imagen. Este tipo de técnica es útil dentro del análisis de datos no estructurados cuando se trabaja con imágenes que contienen texto (por ejemplo, carteles, matrículas, documentos escaneados, etc.).
   - **NOTA**: Será necesaria primero la descarga del programa Tesseract y se recomienda instalarlo en la misma ruta que se muestra en el código.
 
+---
+
 ### Cómo arrancar
 
 1. Crea un entorno a partir del fichero `requirements_imagen.txt`, dentro de la carpeta **requirements**.
@@ -119,5 +121,7 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
 3. Descargar el dataset desde [Kaggle](https://www.kaggle.com/datasets/mohamedmaher5/vehicle-classification).
 4. Coloca tus imágenes en `./data/vehicle/Vehicles/<clase>/*.jpg`.  
 5. Abre el notebook, ajusta `ROOT_DIR`, `IMG_SIZE`, `BATCH_SIZE` si lo deseas.  
-6. Ejecuta celda a celda en orden.  
+6. Ejecuta celda a celda en orden.
 
+--- 
+[**GitHub:**](https://github.com/202412070/ADNE_IMAGEN_VEHICULOS)
