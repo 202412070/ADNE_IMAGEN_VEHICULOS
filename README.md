@@ -129,4 +129,4 @@ Trabajo realizado por:
 - Gonzalo Lapuerta Gayo
 - Javier Jesús Navaridas Marauri
 
-[**GitHub:**](https://github.com/202412070/ADNE_IMAGEN_VEHICULOS)
+**GitHub:** https://github.com/202412070/ADNE_IMAGEN_VEHICULOS
