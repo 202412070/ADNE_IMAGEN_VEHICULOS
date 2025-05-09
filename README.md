@@ -124,4 +124,9 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
 6. Ejecuta celda a celda en orden.
 
 --- 
+Trabajo realizado por:
+- Alberto Fernández Carrillo
+- Gonzalo Lapuerta Gayo
+- Javier Jesús Navaridas Marauri
+
 [**GitHub:**](https://github.com/202412070/ADNE_IMAGEN_VEHICULOS)
