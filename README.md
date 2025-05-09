@@ -74,7 +74,7 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
 - Visualización de curvas de entrenamiento y validación para `accuracy` y `loss`.
 
 
-- **4.2 Transfer Learning + Fine-tuning (ResNet50)**
+## 4.2 Transfer Learning + Fine-tuning (ResNet50)
 - Se utiliza un modelo ResNet50 preentrenado en ImageNet.
 - Se congelan las capas base y se reemplaza la capa final para ajustarla al número de clases del dataset.
 - Se entrena únicamente la nueva capa final utilizando Adam como optimizador.
@@ -102,13 +102,13 @@ Este notebook realiza un **flujo completo** de análisis y modelado sobre un dat
 
 ## 7. OPCIONAL:
 
-- **7.1. Image Captioning**
+### 7.1. Image Captioning
   - Generación automática de descripciones para imágenes usando el modelo BLIP de Salesforce (`blip-image-captioning-base`).
   - El modelo interpreta el contenido visual y devuelve una frase descriptiva.
  
-- **7.2. Text Extraction (Image-to-Text)**
+### 7.2. Text Extraction (Image-to-Text)
   - En esta celda se utiliza la librería `pytesseract`, un wrapper de Python para Tesseract OCR, con el objetivo de extraer texto desde una imagen. Este tipo de técnica es útil dentro del análisis de datos no estructurados cuando se trabaja con imágenes que contienen texto (por ejemplo, carteles, matrículas, documentos escaneados, etc.).
-- **NOTA**: Será necesaria primero la descarga del programa Tesseract y se recomienda instalarlo en la misma ruta que se muestra en el código.
+  - **NOTA**: Será necesaria primero la descarga del programa Tesseract y se recomienda instalarlo en la misma ruta que se muestra en el código.
 
 ### Cómo arrancar
 
